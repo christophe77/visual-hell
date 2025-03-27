@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="xx">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>🔥H3LL🔥</title>
+		<style>
+			body {
+				background: #ff0099;
+				color: lime;
+				font-family: 'Papyrus', cursive;
+				margin: 0;
+				text-align: center;
+				cursor: crosshair;
+				animation: fb 0.2s infinite alternate;
+			}
+
+			@keyframes fb {
+				0% {
+					background-color: #ff0099;
+				}
+				50% {
+					background-color: #0099ff;
+				}
+				100% {
+					background-color: #00ff99;
+				}
+			}
+
+			@keyframes sh {
+				from {
+					transform: translateX(-5px) rotate(-5deg);
+				}
+				to {
+					transform: translateX(5px) rotate(5deg);
+				}
+			}
+
+			@keyframes sp {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+
+			.bx {
+				background: yellow;
+				padding: 20px;
+				border: 15px groove black;
+				animation: sh 0.1s infinite alternate;
+			}
+
+			.tx {
+				font-size: 60px;
+				font-weight: 900;
+				text-shadow: 5px 5px 0px red;
+				animation: sp 5s linear infinite;
+			}
+
+			.bt {
+				background: cyan;
+				border: 5px dashed pink;
+				padding: 20px;
+				font-size: 30px;
+				cursor: pointer;
+				text-transform: uppercase;
+			}
+
+			.bt:hover {
+				background: red;
+				color: white;
+				transform: rotate(90deg) scale(1.5);
+			}
+
+			.ft {
+				background: black;
+				color: white;
+				padding: 20px;
+				font-size: 20px;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			a {
+				color: yellow;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 25px;
+			}
+
+			a:hover {
+				color: red;
+				text-decoration: underline wavy purple;
+				transform: scale(1.3);
+			}
+
+			#rt {
+				font-size: 40px;
+				font-weight: bold;
+				color: red;
+			}
+
+			.cr {
+				width: 100%;
+				height: 300px;
+				overflow: hidden;
+				position: relative;
+				border: 10px dashed blue;
+			}
+
+			.cr img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bx">
+			<h1 class="tx">WELCOME TO H3LL</h1>
+			<marquee
+				behavior="alternate"
+				direction="left"
+				scrollamount="20"
+				style="font-size: 30px; color: blue"
+				>90s MARQUEE</marquee
+			>
+			<p
+				style="
+					font-size: 25px;
+					color: darkorange;
+					animation: sh 0.1s infinite alternate;
+				"
+			>
+				This site is cursed.
+			</p>
+			<button class="bt" onclick="fn()">CLICK ME</button>
+			<p id="rt">???</p>
+		</div>
+
+		<div class="cr">
+			<img src="15.jpg" style="display: block" />
+			<img src="45.webp" />
+			<img src="50.webp" />
+			<img src="51.webp" />
+			<img src="a.jpg" />
+		</div>
+
+		<footer class="ft">
+			<a
+				href="https://www.linkedin.com/in/christophe-bellec-3b5518291/"
+				target="_blank"
+				>LinkedIn</a
+			>
+			<a href="https://github.com/christophe77" target="_blank">GitHub</a>
+			<a
+				href="https://www.linkedin.com/in/christophe-bellec-3b5518291/"
+				target="_blank"
+				>OnlyFans</a
+			>
+		</footer>
+
+		<script>
+			const ms = [
+				'SGVsbG8gdGhpcyBpcyBhIG1lc3NhZ2U=',
+				'VGhpcyB3ZWJzaXRlIHN1Y2tzLg==',
+				'SnVzdCBzaG91dGluZyBhIHJhbmRvbSBzdHJpbmc=',
+				'SmF2YVNjcmlwdCBjYW4gYmUgYSBuaWdodG1hcmU=',
+				'U2VyaW91c2x5LCB3aHkgYXJlIHlvdSBldmVuIGhlcmU/',
+				'VGhpcyBjb2RlIGZlZWxzIGxpa2UgYSBtaXN0YWtlLg==',
+				'WW91IGFyZSB3YXN0aW5nIHlvdXIgdGltZS4=',
+				'U3RvcCByZWFkaW5nIHRoZXNlLg==',
+			];
+
+			function fn() {
+				alert('404 ERROR: You have entered chaos.');
+				setInterval(() => {
+					document.body.style.background =
+						'rgb(' +
+						Math.random() * 255 +
+						',' +
+						Math.random() * 255 +
+						',' +
+						Math.random() * 255 +
+						')';
+				}, 200);
+			}
+
+			function rt() {
+				let i = Math.floor(Math.random() * ms.length);
+				let d = atob(ms[i]);
+				document.getElementById('rt').innerText = d;
+
+				let sp = new SpeechSynthesisUtterance(d);
+				sp.rate = 0.7;
+				sp.pitch = 1.2;
+				window.speechSynthesis.speak(sp);
+			}
+
+			setInterval(rt, 5000);
+
+			const cu = [
+				'crosshair',
+				'wait',
+				'pointer',
+				'progress',
+				'cell',
+				'help',
+				'not-allowed',
+			];
+			setInterval(() => {
+				document.body.style.cursor = cu[Math.floor(Math.random() * cu.length)];
+			}, 1000);
+
+			let ix = 0;
+			function cr() {
+				let i = document.querySelectorAll('.cr img');
+				i.forEach((img) => (img.style.display = 'none'));
+				i[ix].style.display = 'block';
+				ix = (ix + 1) % i.length;
+			}
+
+			setInterval(cr, 3000);
+
+			let hb = document.createElement('button');
+			hb.innerText = 'DO NOT CLICK';
+			hb.style.position = 'absolute';
+			hb.style.top = '50px';
+			hb.style.left = '50px';
+			hb.style.opacity = '0.2';
+			hb.onclick = () => {
+				document.body.innerHTML =
+					"<h1 style='font-size:100px;color:red;'>YOU BROKE IT</h1>";
+			};
+			document.body.appendChild(hb);
+		</script>
+	</body>
+</html>
